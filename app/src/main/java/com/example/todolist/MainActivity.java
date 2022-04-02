@@ -40,6 +40,10 @@ public class MainActivity extends AppCompatActivity implements OnDialogCloseList
     mRecyclerview.setLayoutManager(new LinearLayoutManager(this));
     mRecyclerview.setAdapter(adapter);
 
+    ItemTouchHelper itemTouchHelper=new
+            ItemTouchHelper(new RecyclerViewTouchHelper(adapter));
+    itemTouchHelper.attachToRecyclerView(mRecyclerview);
+
     mList = myDB.getAllTasks();
     Collections.reverse(mList);
     adapter.setTasks(mList);
@@ -50,9 +54,6 @@ public class MainActivity extends AppCompatActivity implements OnDialogCloseList
         AddNewTask.newInstance().show(getSupportFragmentManager(),AddNewTask.TAG);
         }
     });
-        ItemTouchHelper itemTouchHelper=new ItemTouchHelper(new RecyclerViewTouchHelper(adapter));
-        itemTouchHelper.attachToRecyclerView(mRecyclerview);
-
     }
 
     @Override

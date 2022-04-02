@@ -4,12 +4,12 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/edittext"
-        android:paddingStart="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
         android:hint="Enter a new task"
-        android:paddingEnd="7dp"/>
+        android:paddingStart="7dp"
+        android:paddingEnd="7dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -19,7 +19,7 @@
         android:layout_alignParentEnd="true"
         android:id="@+id/button_save"
         android:textColor="@color/black"
-        android:backgroundTint="#07C0C6"
+        android:backgroundTint="#0BD1D1"
         android:textSize="20sp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="5dp"/>
